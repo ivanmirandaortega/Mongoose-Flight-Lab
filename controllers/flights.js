@@ -7,7 +7,7 @@ module.exports = {
 };
 
 function newFlight(req, res) {
-    res.render('flights/new');
+    res.render('flights/new', { title: 'Add Flight' });
 };
 
 function create(req, res) {
@@ -22,7 +22,8 @@ function create(req, res) {
 function index(req, res) {
     Flight.find({}, function (err, flights) {
         res.render('flights/index', {
-            flights
+            flights,
+            title: 'All Flights'
         })
     })
 }
