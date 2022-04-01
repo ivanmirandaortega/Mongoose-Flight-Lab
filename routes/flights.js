@@ -10,9 +10,9 @@ router.get('/new', flightController.new);
 router.post('/', flightController.create);
 
 
-/* GET users listing. */
-router.get('/', function (req, res, next) {
-  res.send('respond with a resource');
-});
+// /* GET users listing. */
+// router.get('/', function (req, res, next) {
+//   res.send('respond with a resource');
+// });
 
 module.exports = router;
