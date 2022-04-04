@@ -1,30 +1,43 @@
 <%- include('../partials/header') %> 
 
+<div class="container">
     <form action="/flights" method="POST">
-        <label class="form-label">Airline:
-            <select name="airline">
-                <option value="American">American</option>
-                <option value="Delta">Delta</option>
-                <option value="Southwest">Southwest</option>
-                <option value="United">United</option>
-            </select>
-        </label><br>
-        <label class="form-label">Airport:
-            <select name="airport">
-                <option value="ATL">ATL</option>
-                <option value="DFW">DFW</option>
-                <option value="DEN">DEN</option>
-                <option value="LAX">LAX</option>
-                <option value="SAN">SAN</option>
-            </select>
-        </label><br>
-        <label class="form-label">Flight Number: 
-            <input type="text" name="flightNo">
-        </label><br>
-        <label class="form-label">Departure :
-            <input type="datetime-local" name="departs" value="2022-03-31T22:00" min="2022-03-31T00:00" max="2023-03-31T00:00">
-        </label><br>
+            <div class="row row-cols-2">
+                <div class="col">
+                    <label class="form-label">Airline:
+                        <select name="airline">
+                            <option value="American">American</option>
+                            <option value="Delta">Delta</option>
+                            <option value="Southwest">Southwest</option>
+                            <option value="United">United</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="col">
+                    <label class="form-label">Airport:
+                        <select name="airport">
+                            <option value="ATL">ATL</option>
+                            <option value="DFW">DFW</option>
+                            <option value="DEN">DEN</option>
+                            <option value="LAX">LAX</option>
+                            <option value="SAN">SAN</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="col">
+                    <label class="form-label">Flight Number: 
+                        <input type="text" name="flightNo">
+                    </label>
+                </div>
+                <div class="col">
+                    <label class="form-label">Departure :
+                        <input type="datetime-local" name="departs" value="2022-03-31T22:00" min="2022-03-31T00:00" max="2023-03-31T00:00">
+                    </label>
+                </div>
+            </div>
             <input type="submit" value="Add Flight" class="btn btn-primary">
-    </form>
+        </form>
+</div>
+
 
 <%- include('../partials/footer') %> 
