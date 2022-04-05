@@ -8,8 +8,12 @@ router.get('/', flightController.index);
 router.get('/new', flightController.new);
 // /flights/ 
 router.get('/:id', flightController.show);
+
+// router.get('/:id/tickets/new', flightController.newTicket);
+
 // POST /flights 
 router.post('/', flightController.create);
+
 
 // /* GET users listing. */
 // router.get('/', function (req, res, next) {
